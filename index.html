@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-		<meta charset="utf-8">
-		<title></title>
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-	</head>
-	<body>
-		
-		<nav class="navbar navbar-default">
-		  <div class="container-fluid">
-		    <div class="navbar-header">
-		      <a id="navTitle" class="navbar-brand" href="index.html"></a>
-		    </div>
-		  </div>
-		</nav>
-		 <div class="container-fluid">
-	        <table id="listTable" class="table">
-	        	
-	        </table>
-	    </div>
-		<script src="js/config.js"></script>
-		<script src="js/main.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-	</body>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a id="navTitle" class="navbar-brand" href="index.html"></a>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="form-inline">
+            <div class="form-group">
+                <input type="text" class="form-control" id="desc" placeholder="Description">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="amount" placeholder="Amount">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="value" placeholder="Value">
+            </div>
+            <span id="btnUpdate" style="display: none;">
+                <span id="inputIDUpdate"></span>
+                <button onclick="updateData();" class="btn btn-default">Save</button>
+                <button onclick="resetForm();" class="btn btn-default">Cancel</button>
+            </span>
+            <button id="btnAdd" onclick="addData();" class="btn btn-default">Add</button>
+        </div>
+        <table id="listTable" class="table">
 
-	</html>
+        </table>
+    </div>
 
-	<!-- <thead>
-	        		<tr>
-	        			<td>Descriçao</td>
-	        			<td>Quantidade</td>
-	        			<td>Valor</td>
-	        			<td>Action</td>
-	        		</tr>
-	        	</thead>
-	        	<tbody>
-	        		<tr>
-	        			<td>Rice</td>
-	        			<td>2</td>
-	        			<td>R$ 5.90</td>
-	        			<td>Edit | Delete</td>
-	        		</tr>
-	        	</tbody> -->
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
