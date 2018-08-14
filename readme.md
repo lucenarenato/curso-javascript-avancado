@@ -33,5 +33,7 @@ Salvando registros no local storage
 Resumo final
 0:02:25
 
+- Para meu conhecimento proprio, estarei usando o debugger do javascript.
+
 - (schoolofnet)
 - Renato de O. Lucena - 2018

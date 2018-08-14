@@ -23,14 +23,14 @@ function setList(list){
 }
 
 function formatDesc(desc){
-    var str = desc.toLowerCase();
-    str = str.charAt(0).toUpperCase() + str.slice(1);
+    var str = desc.toLowerCase(); //toLowerCase, deixa tudo minusculo
+    str = str.charAt(0).toUpperCase() + str.slice(1); //CharAt, primeira maiscula
     return str;
 }
 
 function  formatValue(value){
-    var str = parseFloat(value).toFixed(2) + "";
-    str = str.replace(".",",");
+    var str = parseFloat(value).toFixed(2) + ""; // toFixed, apenas dois numeros decimais, dois numeros apos o ponto
+    str = str.replace(".",","); // replace, transforma ponto em virgula
     str = "R$ " + str;
     return str;
 }
