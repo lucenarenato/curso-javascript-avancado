@@ -1,6 +1,6 @@
 function setConfig(){
     var texts = {
-        "title":"Shopping Control"
+        "title":"Controle de Compra"
     };
     document.title = texts.title;
     document.getElementById("navTitle").innerHTML = texts.title;

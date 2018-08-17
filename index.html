@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Java Script Avançado</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
 </head>
@@ -26,16 +26,30 @@
                 <input type="text" class="form-control" id="value" placeholder="Value">
             </div>
             <span id="btnUpdate" style="display: none;">
-                <span id="inputIDUpdate"></span>
+                <span id="inputIDupdate"></span>
                 <button onclick="updateData();" class="btn btn-default">Save</button>
                 <button onclick="resetForm();" class="btn btn-default">Cancel</button>
             </span>
-            <button id="btnAdd" onclick="addData();" class="btn btn-default">Add</button>
+            <span id="btnAdd">
+                    <button id="btnAdd" onclick="addData();" class="btn btn-default">Add</button>
+                    <button onclick="resetForm();" class="btn btn-default">Reset</button>
+                    <button onclick="deleteList();" class="btn btn-default">Delete List</button>
+            </span>
+            <!--<button id="btnAdd" onclick="addData();" class="btn btn-default">Add</button>-->
+        </div>
+
+        <div id="erros" style="display: none"> <!--display none, faz desaparecer os erros.-->
+            
         </div>
         <table id="listTable" class="table">
 
         </table>
     </div>
+     <nav class="nav navbar-default navbar-fixed-bottom">
+        <div class="container">
+            <h4 class="text-center text-sucess">Total: <span id="totalValue"> $ 0,00</span></h4>
+        </div>
+     </nav>
 
     <script src="js/config.js"></script>
     <script src="js/main.js"></script>
