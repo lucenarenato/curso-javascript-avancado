@@ -10,7 +10,8 @@ var total = 0;
     for(var key in list){
         total += list[key].value * list[key].amount;
     }
-    return total;
+    //return total;
+     document.getElementById("totalValue").innerHTML = formatValue(total);
 }
 
 function setList(list){
@@ -20,6 +21,8 @@ function setList(list){
     }
     table += '</tbody>';
     document.getElementById("listTable").innerHTML = table;
+    getTotal(list);
+    saveListStorage(list);
 }
 
 function formatDesc(desc){
@@ -98,7 +101,7 @@ function deleteData(id) {
         if(id === list.length - 1){
             list.pop();
         }else if (id === 0){
-            list.shift(); // limpra o primeiro registro do array
+            list.shift(); // limpa o primeiro registro do array
         }else{
             var arrayAuxIni = list.slice(0, id);
             var arrayAuxEnd = list.slice(id + 1);
@@ -145,8 +148,8 @@ function validation() { // função que faz validaçao de erros!
     }
 }
 
-function saveListStorage(list) {
-    var jsonStr = JSON.stringify(list);
+function saveListStorage(list) { // salvar os dados no local storage, como list.
+    var jsonStr = JSON.stringify(list); // transforma no lista em json para string, pois storage so aceita string.
     localStorage.setItem("list",jsonStr);
 }
 
@@ -160,5 +163,5 @@ function initListStorage() {
 
 initListStorage();
 
-setList(list);
+//setList(list);
 console.log(getTotal(list));
